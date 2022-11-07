@@ -1,0 +1,804 @@
+
+@font-face {
+    font-family: 'Shrikhand Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Shrikhand Regular'), url('Shrikhand-Regular.woff') format('woff');
+}
+
+
+$home: #F2F2F2;
+$outline: #dadada;
+$clasic:  #ffffff;
+$highlighter:  #99E2D0;
+$font-lg: 22px;
+$font-md: 20px;
+$font-sm: 20px;
+$font-mini: 15px;
+$place: #e6e6e5;
+$btn: #686868;
+$numerotation: #9356DC;
+
+* {box-sizing: border-box;}
+
+body {
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.loader {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation: 3s loader;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+    
+}    
+    
+.box {
+    height: 38px;
+    width: 10px;
+    background-color: #FF79DA;
+    opacity: 1;
+    position:relative;
+    left: -100px;
+    opacity: 0;
+}
+
+.charging {
+    animation: 3s progress-bar;
+    animation-timing-function: ease-in-out;  
+    animation-fill-mode: backwards;
+    background-color: transparent;
+    border: black 2px solid;
+    height: 40px;
+    width: 200px;
+}   
+
+
+
+@keyframes loader {
+    
+    0% {
+        background-color: rgba(255, 255, 255, 0.90);
+        z-index: 1;
+    } 
+
+    99% {
+        background-color: rgba(255, 255, 255, 0.90);
+        z-index: 1;
+    }
+
+    100% {
+        
+        background-color: transparent;
+        
+    }
+}
+
+
+@keyframes progress-bar {
+
+    0% {
+        transform: translateX(0);
+        background-color: #FF79DA;
+        width: 0px;
+        opacity: 1;
+    }
+    
+
+    100% {
+        transform: TranslateX(100px);
+        background-color: $numerotation;
+        opacity: 1;
+        width: 200px;
+    }
+}    
+
+
+    
+header {
+    display: flex;
+     justify-content: center;
+    height: 50px;
+    text-align: center;
+}
+
+#logo {
+    height: 28px;
+    margin-top: 8%;  
+}
+
+
+.localisation {
+    display: flex;
+    flex-direction: row;
+    background-color: $place;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+
+i { margin-right: 25px;}
+
+}
+
+.reservation {
+    background-color: $home;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+
+    h1 {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    p {
+        font-size: $font-mini;
+        width:80% ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 6%;
+    }
+
+}
+
+button {
+    background-color: $btn;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    color: $clasic;
+    text-decoration: none;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 0px;
+    padding-left: 15px;
+    box-shadow: 5px 5px 10px $outline;
+
+    &::placeholder {color: $clasic;}
+    &:hover {
+        background-color: $clasic;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+    }        
+}   
+    
+  
+nav h2 {padding-left: 15px;}
+
+ul {
+    padding-left: 6%;
+
+    li {
+        background-color: $home;
+        height: 70px;
+        width: 95%;
+        margin-bottom: 15px;
+        border: $home 1px ;
+        border-radius:15px ;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: 5px 5px 10px $outline;
+
+        &:hover {
+            background-color: #ebe8fc;      
+        } 
+
+        }
+
+        i {margin-right: 20px;
+
+            &:hover {
+                color: $numerotation;
+            }
+        
+    }   
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $numerotation ;
+    height: 25px;
+    width: 25px;
+    color: $clasic;
+    margin-right: 5%;
+    border-radius: 50%;
+    position: relative;
+    left: -10px;
+}
+
+.restaurant {
+    background-color: $home;
+    padding: 4%;
+    
+}
+
+.new {
+    display: flex;
+    justify-content: center;
+    background-color: $highlighter;
+    width: 22%;
+    height: 25px;
+    position: relative;
+    align-items: center;
+    left: 75%;
+    top: 3.5rem;
+    margin-top: -30px;
+    color: #008000;
+}
+
+
+article {
+     width: 100%;
+     height: 260px;
+     background-color: $clasic;
+     margin: 15px 0px;
+     border-radius: 15px;
+     box-shadow: 5px 5px 10px $outline;
+
+         img {
+            height: 75%;
+            width: 100%;
+            margin-bottom:2px ;
+            object-fit: cover;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+         h3 {
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+        
+         p {
+            margin-top: -15px;
+            margin-left: 10px;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            width: 91%;
+            align-items: center;
+
+        .heart {
+            background-color: transparent;
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: transparent 1px solid;
+            position: relative;
+    
+              &::before {
+                opacity: 0;
+                transition: 0.5s;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            
+            } 
+        }
+        .fa-regular {
+            background-color: white;
+            position: relative;
+            font-size: 29px;
+            right: -1rem;
+            
+        }
+
+        .fa-solid {
+            font-size: 30px;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+            position: relative;
+            left: -0.8rem;
+            opacity: 0;
+
+        &:hover {
+            opacity: 1;
+            transition-duration: .25s;
+        }
+
+        }  
+    }
+}
+        
+                       
+.legendary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+footer {
+    padding: 20px;
+    background-color: #303030;
+    color: $clasic;
+
+         div {
+            display: flex;
+            align-items: center;
+            margin-top: -15px;
+            margin-bottom: -15px;
+        }
+
+         i { 
+            margin-right: 10px;
+            color: $clasic;
+        }
+
+         h4 {
+            font-size: $font-lg;
+            font-family: 'Shrikhand Regular';
+        }
+}
+
+
+
+    /*La palette du gout*/ /*La note enchantée*/ /*A la française*/ /*Le délice des sens*/
+
+
+.taste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-family: 'Shrikhand Regular';
+            
+    }
+
+    i {
+        font-size: $font-lg;
+        position: relative;
+        left: -50px;
+            
+    }
+        
+}
+
+.block img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+        font-size: 24px;
+        font-family: 'Shrikhand Regular';
+           
+    }
+
+    .heart2 {
+        background-color: transparent;
+        height: 2rem;
+        width: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: transparent 1px solid;
+        position: relative;
+
+         &::before {
+            opacity: 0;
+            transition: 0.5s;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            
+        } 
+
+         .fa-regular {
+            background-color: $home;
+            position: relative;
+            font-size: 29px;
+        }
+
+        .fa-solid {
+            opacity: 0;
+            position: relative;
+            left: -1.8rem;
+            font-size: 30px;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+
+        &:hover {
+            opacity: 1;
+            transition-duration: 0.25s;
+        }
+     }
+  } 
+
+ }
+
+.menu {
+    background-color: $home;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 15px;
+    position: relative;
+    top: -50px;
+    margin-bottom: -80px;
+
+    .apparition {
+            animation: 1s menuAnimation;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+            animation-delay: 0.2s;
+    }
+
+    .apparition2 {
+        animation: 1s menuAnimation;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-delay: 1s;
+    }  
+        
+    .apparition3 {
+        animation: 1s menuAnimation;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-delay: 1.8s;
+    }
+
+@keyframes menuAnimation {
+
+    from {
+        transform: scale(0);
+                
+        }
+ 
+    to {
+        transform: scale(1);
+                
+        }
+}
+
+h3 {
+    font-size: $font-mini;
+    font-style: normal;
+    font-weight: 100;
+    border-bottom: $highlighter 3px solid;
+    width: 12%;    
+}
+        
+ ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0%;
+ }
+   
+
+.menuitem {
+    background-color: $clasic;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px;
+    box-shadow: 5px 5px 10px $outline;
+    overflow: hidden;
+    
+
+    .menuhead {
+         display: inline;
+         width: 90%;
+         height: 45px;
+         margin-top: 10px;
+         flex: 1;
+         overflow: hidden;
+    }  
+
+    h4 { 
+         margin-top: 2px;
+         font-size: 16px;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         overflow: hidden;
+    }    
+        
+    p {
+        margin-top: -20px;
+        white-space: nowrap;
+         text-overflow: ellipsis;
+         overflow: hidden;
+    }
+          
+     .price {
+         margin-top: 10px;
+         height: 45px;
+         width: 40px;
+         
+
+     strong {
+        display: flex;
+        justify-content: center;
+        align-items:flex-end;
+        margin-top: 22px;
+     }
+    }
+
+    .confirmation {
+        background-color: $highlighter;
+        width: 20px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        top:-5px;
+        opacity: 0;
+        right: -5px;
+            
+    }
+
+    .animate {
+        transition: width 0.5s;
+            
+    }
+
+    .fa-circle-check {
+        color: $clasic;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        transition: 0.1s;
+        transform: rotate(180deg);
+    }
+
+    &:hover {
+        .animate {
+             border-bottom-right-radius: 15px; 
+             border-top-right-radius: 15px;
+             transition: width 0.5s;
+             width: 70px ;
+             opacity: 1;
+        }
+
+        .fa-circle-check {
+             opacity: 1;
+             font-size: 30px;
+             margin-left: 70%;
+             transform: rotate(0);
+             transition-duration: 0.4s;
+        }
+     }
+    }
+   }
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    width: 180px;
+    height: 50px;
+    background-color: $btn;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    color: $clasic;
+    font-size: $font-mini;
+    box-shadow: 5px 5px 10px $outline;
+}
+   
+.validation {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Tablette */
+
+@media screen and (min-width: 768px) {
+
+    .reservation h1 {
+        display: flex;
+        justify-content: center;   
+     }
+
+     .reservation p {
+        display: flex;
+        justify-content: center;
+    
+     }
+
+     button {
+        height: 45px;
+        font-weight: bold;
+        font-size: 15px;
+     }
+
+     ul {padding-left: 4%;
+    
+        li { width: 96%;}
+
+    }
+
+    .new {
+        width: 10%;
+        left: 88%;
+     }
+
+     span i {font-size: 30px;}
+ 
+     .block img {height: 500px;}    
+    
+    .menu h3 {width: 5%;}
+    
+    .taste i {
+        position: relative;
+        left: -260px;
+    }
+}
+
+
+/*Laptop*/
+
+@media screen and (min-width: 992px) {
+
+ /*Home*/   
+
+ul {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    li { width: 30%;}
+}
+
+.new {
+    width: 15%;
+    left: 80%;
+}
+     
+h2 {margin-left: 2%;}
+
+.restaurant {padding: 1%;}
+
+.cards {
+    width: 96%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    margin-left: 2%;
+}
+
+.article {height: 260px;}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+
+.item {
+    width: 32%;
+h3 {
+    font-size: $font-md;
+    font-style: normal;
+    font-weight: 200;
+    border-bottom: $highlighter 4px solid;
+    width: 12%;
+}
+    
+ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0%;
+    width: 90%;      
+ }
+
+.menuitem {
+    background-color: $clasic;
+    width: 100%;
+    height: 70px;
+    padding-left: 10px;
+    box-shadow: 5px 5px 10px $outline;
+
+    .menuhead {
+        /*display: flex;
+        flex-direction: column;*/
+        width: 90%;
+        height: 42px;
+        margin-top: 12px;
+    }
+
+    .price {
+
+        margin-top: 12px;
+        strong {
+            margin-top: 23px;
+            margin-left: 10px;
+        }
+    }
+
+    .confirmation {
+        position: relative;
+    }
+  }
+ }
+}
+
+    .taste i {
+        position: relative;
+        left: -400px;
+    }
+
+    .menu li {width: 100%;}
+
+    .menu h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 15%;
+   }
+
+}
+
+
+/*Desktop*/
+
+
+@media screen and (min-width: 1441px) {
+
+    
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+}
+
+
+       
