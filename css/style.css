@@ -1,10 +1,12 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Shrikhand Regular";
-  font-style: normal;
+  font-family: "Shrikhand";
+  src: url("Shrikhand-Regular.eot");
+  src: local("Shrikhand Regular"), local("Shrikhand-Regular"), url("Shrikhand-Regular.eot?#iefix") format("embedded-opentype"), url("Shrikhand-Regular.woff2") format("woff2"), url("Shrikhand-Regular.woff") format("woff"), url("Shrikhand-Regular.ttf") format("truetype");
   font-weight: normal;
-  src: local("Shrikhand Regular"), url("Shrikhand-Regular.woff") format("woff");
+  font-style: italic;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -348,7 +350,7 @@ footer i {
 }
 footer h4 {
   font-size: 22px;
-  font-family: "Shrikhand Regular";
+  font-family: "Shrikhand";
 }
 
 /*La palette du gout*/ /*La note enchantée*/ /*A la française*/ /*Le délice des sens*/
@@ -363,7 +365,7 @@ footer h4 {
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  font-family: "Shrikhand Regular";
+  font-family: "Shrikhand";
 }
 .taste i {
   font-size: 22px;
@@ -386,7 +388,7 @@ footer h4 {
 }
 .title h2 {
   font-size: 24px;
-  font-family: "Shrikhand Regular";
+  font-family: "Shrikhand";
 }
 .title .heart2 {
   background-color: transparent;
