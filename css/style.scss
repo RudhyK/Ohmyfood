@@ -1,11 +1,15 @@
 
 @font-face {
-    font-family: 'Shrikhand Regular';
-    font-style: normal;
+    font-family: 'Shrikhand';
+    src: url('Shrikhand-Regular.eot');
+    src: local('Shrikhand Regular'), local('Shrikhand-Regular'),
+        url('Shrikhand-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Shrikhand-Regular.woff2') format('woff2'),
+        url('Shrikhand-Regular.woff') format('woff'),
+        url('Shrikhand-Regular.ttf') format('truetype');
     font-weight: normal;
-    src: local('Shrikhand Regular'), url('Shrikhand-Regular.woff') format('woff');
+    font-style: italic;
 }
-
 
 $home: #F2F2F2;
 $outline: #dadada;
@@ -360,7 +364,7 @@ footer {
 
          h4 {
             font-size: $font-lg;
-            font-family: 'Shrikhand Regular';
+            font-family: "Shrikhand";
         }
 }
 
@@ -380,7 +384,7 @@ footer {
         justify-content: center;
         align-items: center;
         font-size: 30px;
-        font-family: 'Shrikhand Regular';
+        font-family: "Shrikhand";
             
     }
 
@@ -408,7 +412,7 @@ footer {
 
     h2 {
         font-size: 24px;
-        font-family: 'Shrikhand Regular';
+        font-family: "Shrikhand";
            
     }
 
